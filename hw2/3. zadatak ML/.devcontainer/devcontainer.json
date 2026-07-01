@@ -1,0 +1,39 @@
+{
+	"name": "Masinsko",
+
+	"image": "tensorflow/tensorflow:2.10.0-gpu",
+
+	"runArgs": [
+		// "--gpus=all",
+		// "--ipc=host",
+		// "--shm-size=512m",
+		"--network=host"
+	],
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					}
+				}
+            },
+			
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"github.copilot",
+				"eamodio.gitlens",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.isort",
+				"christian-kohler.path-intellisense"
+			]
+		}
+	},
+	
+	"postCreateCommand": "pip install -r requirements.txt && apt-get update && apt-get install ffmpeg libsm6 libxext6 -y",
+
+	"shutdownAction": "stopContainer"
+}
