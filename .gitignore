@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+__pycache__/
+*.rtf
+*.mp4
+data/
+simulator/
+model/
