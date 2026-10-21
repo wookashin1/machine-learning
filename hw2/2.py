@@ -16,8 +16,8 @@ def normalize(x):
     return (x - mean) / std
 
 def load_data():
-    train_data = pd.read_csv('/Users/vule/Desktop/faks/Masinsko ucenje/ml_d2_RN-522_RN-3522/titanic/train.csv')
-    test_data = pd.read_csv('/Users/vule/Desktop/faks/Masinsko ucenje/ml_d2_RN-522_RN-3522/titanic/test.csv')
+    train_data = pd.read_csv('hw2/titanic/train.csv')
+    test_data = pd.read_csv('hw2/titanic/test.csv')
     
     train_data['Age'] = train_data['Age'].fillna(train_data['Age'].median())
     test_data['Age'] = test_data['Age'].fillna(test_data['Age'].median())

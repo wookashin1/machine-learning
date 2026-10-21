@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import matplotlib.pyplot as plt
 
-train_data = pd.read_csv('/Users/vule/Desktop/faks/Masinsko ucenje/ml_d2_RN-522_RN-3522/titanic/train.csv')
-test_data = pd.read_csv('/Users/vule/Desktop/faks/Masinsko ucenje/ml_d2_RN-522_RN-3522/titanic/test.csv')
+train_data = pd.read_csv('hw2/titanic/train.csv')
+test_data = pd.read_csv('hw2/titanic/test.csv')
 
 train_data['Age'] = train_data['Age'].fillna(train_data['Age'].median())
 train_data['Embarked'] = train_data['Embarked'].fillna(train_data['Embarked'].mode()[0])
